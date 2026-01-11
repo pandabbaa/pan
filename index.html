@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>yours - YouTube Publisher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<h1>yours – YouTube Video Publisher</h1>
+
+<p>This application allows users to upload videos to YouTube using the YouTube Data API v3.</p>
+
+<button onclick="login()">Login with Google</button>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <br>
+  <input type="file" name="video" required><br><br>
+  <input type="text" name="title" placeholder="Video Title" required><br><br>
+  <textarea name="description" placeholder="Video Description"></textarea><br><br>
+  <button type="submit">Upload to YouTube</button>
+</form>
+
+<hr>
+
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms & Conditions</a>
+
+<script>
+function login() {
+  window.location.href = "/auth/google";
+}
+</script>
+
+</body>
+</html>
